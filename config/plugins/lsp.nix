@@ -46,8 +46,10 @@
 
     lsp = {
       enable = true;
-
       servers = {
+        nixd = {
+          enable = true;
+        };
         tsserver = {
           enable = true;
         };
