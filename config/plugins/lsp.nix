@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   extraPlugins = with pkgs.vimPlugins; [
     neodev-nvim
     highlight-undo-nvim
@@ -6,6 +7,7 @@
 
   extraConfigLuaPre = ''
     require('neodev').setup {}
+    require('highlight-undo').setup({})
   '';
 
   diagnostic.config = {

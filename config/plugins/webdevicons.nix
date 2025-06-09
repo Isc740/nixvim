@@ -1,3 +1,3 @@
 {
-  plugins.webdevicons.enable = true;
+  plugins.web-devicons.enable = true;
 }

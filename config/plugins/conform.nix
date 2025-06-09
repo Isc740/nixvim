@@ -1,6 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   extraPackages = with pkgs; [
     stylua
+    prettierd
   ];
 
   plugins.conform-nvim = {
@@ -19,8 +21,8 @@
       end
     '';
     formattersByFt = {
-      lua = ["stylua"];
-      javascript = [["biome" "prettierd" "prettier"]];
+      lua = [ "stylua" ];
+      javascript = [ "prettierd" ];
     };
   };
 
