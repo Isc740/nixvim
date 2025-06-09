@@ -1,10 +1,12 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./plugins/autopairs.nix
     ./plugins/colorizer.nix
     ./plugins/conform.nix
     ./plugins/cursorline.nix
     ./plugins/emmet.nix
+    ./plugins/fugitive.nix
     ./plugins/gitsigns.nix
     ./plugins/indent-blankline.nix
     ./plugins/lint.nix
@@ -16,6 +18,9 @@
     ./plugins/nvim-notify.nix
     ./plugins/telescope.nix
     ./plugins/theme.nix
+    ./plugins/ts-autotag.nix
+    ./plugins/undotree.nix
+    ./plugins/webdevicons.nix
     ./plugins/treesitter.nix
     ./plugins/which-key.nix
     ./plugins/yanky.nix
@@ -120,7 +125,7 @@
 
   autoCmd = [
     {
-      event = ["TextYankPost"];
+      event = [ "TextYankPost" ];
       desc = "Highlight when yanking (copying) text";
       group = "kickstart-highlight-yank";
       callback.__raw = ''
