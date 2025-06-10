@@ -60,7 +60,7 @@
     ignorecase = true;
     smartcase = true;
 
-    signcolumn = "yes";
+    signcolumn = "number";
 
     updatetime = 250;
 

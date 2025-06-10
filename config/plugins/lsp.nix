@@ -52,15 +52,19 @@
         nixd = {
           enable = true;
         };
+
         tsserver = {
           enable = true;
         };
+
         sqls = {
           enable = true;
         };
+
         tailwindcss = {
           enable = true;
         };
+
         lua-ls = {
           enable = true;
           settings = {
@@ -69,11 +73,13 @@
             };
           };
         };
+
         prismals = {
           enable = true;
           package = null;
         };
       };
+
       keymaps = {
         # Diagnostic keymaps
         diagnostic = {
