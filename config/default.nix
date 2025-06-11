@@ -20,6 +20,7 @@
     ./plugins/theme.nix
     ./plugins/ts-autotag.nix
     ./plugins/undotree.nix
+    ./plugins/vim-rzip.nix
     ./plugins/webdevicons.nix
     ./plugins/treesitter.nix
     ./plugins/which-key.nix

@@ -8,6 +8,12 @@
   extraConfigLuaPre = ''
     require('neodev').setup {}
     require('highlight-undo').setup({})
+
+    require('lspconfig').prismals.setup({
+        cmd = { "prisma-language-server", "--stdio" },
+        filetypes = { "prisma" },
+        root_dir = require('lspconfig.util').root_pattern(".git", "schema.prisma"),
+    })
   '';
 
   diagnostic.config = {

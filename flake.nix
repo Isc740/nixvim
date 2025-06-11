@@ -5,14 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixos-npm-ls.url = "github:y3owk1n/nixos-npm-ls";
+    # nixos-npm-ls.url = "github:y3owk1n/nixos-npm-ls";
   };
 
   outputs =
     {
       nixvim,
       flake-parts,
-      nixos-npm-ls,
+      # nixos-npm-ls,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -31,9 +31,9 @@
           nixvimModule = {
             inherit system;
             module = [
-              (import ./overlays.nix {
-                inherit nixos-npm-ls;
-              })
+              # (import ./overlays.nix {
+              #   inherit nixos-npm-ls;
+              # })
               ./config
             ];
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
