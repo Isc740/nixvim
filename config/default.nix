@@ -2,6 +2,7 @@
 {
   imports = [
     ./plugins/autopairs.nix
+    ./plugins/barbar.nix
     ./plugins/colorizer.nix
     ./plugins/conform.nix
     ./plugins/cursorline.nix

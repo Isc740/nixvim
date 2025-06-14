@@ -3,7 +3,11 @@
     enable = true;
 
     lintersByFt = {
-      nix = ["nix"];
+      nix = [ "nix" ];
+      typescript = [ "eslint" ];
+      typescriptreact = [ "eslint" ];
+      javascript = [ "eslint" ];
+      javascriptreact = [ "eslint" ];
       # markdown = [
       # ];
       #clojure = ["clj-kondo"];
