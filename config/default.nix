@@ -17,6 +17,7 @@
     ./plugins/nix-develop.nix
     ./plugins/nvim-cmp.nix
     ./plugins/nvim-notify.nix
+    ./plugins/rest.nix
     ./plugins/telescope.nix
     ./plugins/theme.nix
     ./plugins/ts-autotag.nix
@@ -62,7 +63,7 @@
     ignorecase = true;
     smartcase = true;
 
-    signcolumn = "number";
+    signcolumn = "yes";
 
     updatetime = 250;
 
