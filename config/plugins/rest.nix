@@ -1,3 +1,6 @@
 {
-  plugins.rest.enable = true;
+  plugins.rest = {
+    enable = true;
+    settings.response.hooks.format = true;
+  };
 }

@@ -20,11 +20,12 @@
     ./plugins/rest.nix
     ./plugins/telescope.nix
     ./plugins/theme.nix
+    ./plugins/tmux-navigator.nix
+    ./plugins/treesitter.nix
     ./plugins/ts-autotag.nix
     ./plugins/undotree.nix
     ./plugins/vim-rzip.nix
     ./plugins/webdevicons.nix
-    ./plugins/treesitter.nix
     ./plugins/which-key.nix
     ./plugins/yanky.nix
   ];
@@ -88,6 +89,16 @@
   keymaps = [
     {
       mode = "n";
+      key = "<A-CR>";
+      action = "<cmd>Lspsaga code_action<CR>";
+      options = {
+        desc = "LSPSaga Code Action";
+        noremap = true;
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
       key = "<C-h>";
       action = "<C-w><C-h>";
       options = {
@@ -125,6 +136,16 @@
       clear = true;
     };
   };
+
+  extraConfigLua = ''
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "json",
+      callback = function()
+        vim.bo.formatexpr = ""
+        vim.bo.formatprg = "jq"
+      end,
+    })
+  '';
 
   autoCmd = [
     {

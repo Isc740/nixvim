@@ -38,6 +38,8 @@
 
     lspsaga = {
       enable = true;
+      lightbulb.debounce = 500;
+      codeAction.keys.exec = "<A-CR>";
     };
 
     lspkind = {
