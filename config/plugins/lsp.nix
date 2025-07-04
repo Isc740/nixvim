@@ -61,6 +61,10 @@
           enable = true;
         };
 
+        kotlin_language_server = {
+          enable = true;
+        };
+
         tsserver = {
           enable = true;
         };

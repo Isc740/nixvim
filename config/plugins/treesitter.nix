@@ -15,6 +15,7 @@
       "javascript"
       "css"
       "prisma"
+      "kotlin"
     ];
 
     # TODO: Figure out how to do this
