@@ -3,6 +3,7 @@
   extraPackages = with pkgs; [
     stylua
     prettierd
+    gofumpt
   ];
 
   plugins.conform-nvim = {
@@ -20,9 +21,14 @@
         }
       end
     '';
+
     formattersByFt = {
       lua = [ "stylua" ];
       javascript = [ "prettierd" ];
+      go = [ "gofumpt" ];
+      html = [ "prettierd" ];
+      tmpl = [ "prettierd" ];
+      gohtml = [ "prettierd " ];
     };
   };
 

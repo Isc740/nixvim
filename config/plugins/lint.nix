@@ -1,17 +1,27 @@
+{ pkgs, ... }:
 {
+  extraPackages = with pkgs; [
+    # htmlhint
+    eslint_d
+    hadolint
+    csslint
+  ];
+
   plugins.lint = {
     enable = true;
 
     lintersByFt = {
       nix = [ "nix" ];
-      typescript = [ "eslint" ];
-      typescriptreact = [ "eslint" ];
-      javascript = [ "eslint" ];
-      javascriptreact = [ "eslint" ];
+      typescript = [ "eslint_d" ];
+      typescriptreact = [ "eslint_d" ];
+      javascript = [ "eslint_d" ];
+      javascriptreact = [ "eslint_d" ];
+      # html = [ "htmlhint" ];
+      css = [ "csslint" ];
       # markdown = [
       # ];
       #clojure = ["clj-kondo"];
-      #dockerfile = ["hadolint"];
+      dockerfile = [ "hadolint" ];
       #inko = ["inko"];
       #janet = ["janet"];
       #json = ["jsonlint"];

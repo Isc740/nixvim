@@ -6,13 +6,15 @@
     ./plugins/colorizer.nix
     ./plugins/conform.nix
     ./plugins/cursorline.nix
-    ./plugins/emmet.nix
+    ./plugins/easy-dotnet.nix
     ./plugins/fugitive.nix
     ./plugins/gitsigns.nix
+    # ./plugins/harpoon.nix
     ./plugins/indent-blankline.nix
     ./plugins/lint.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
+    ./plugins/marks.nix
     ./plugins/neotree.nix
     ./plugins/nix-develop.nix
     ./plugins/nvim-cmp.nix
@@ -20,6 +22,7 @@
     ./plugins/rest.nix
     ./plugins/telescope.nix
     ./plugins/theme.nix
+    ./plugins/tmpl.nix
     ./plugins/tmux-navigator.nix
     ./plugins/treesitter.nix
     ./plugins/ts-autotag.nix
@@ -81,12 +84,22 @@
 
     cursorline = true;
 
-    scrolloff = 10;
+    scrolloff = 6;
 
     hlsearch = true;
   };
 
   keymaps = [
+    {
+      mode = "n";
+      key = "<leader>m";
+      action = "<cmd>MarksListAll<CR>";
+      options = {
+        desc = "Show all marks";
+        noremap = true;
+        silent = true;
+      };
+    }
     {
       mode = "n";
       key = "<A-CR>";
