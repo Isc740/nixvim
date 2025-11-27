@@ -12,12 +12,12 @@
 
     lintersByFt = {
       nix = [ "nix" ];
-      typescript = [ "eslint_d" ];
-      typescriptreact = [ "eslint_d" ];
-      javascript = [ "eslint_d" ];
-      javascriptreact = [ "eslint_d" ];
+      # typescript = [ "eslint_d" ];
+      # typescriptreact = [ "eslint_d" ];
+      # javascript = [ "eslint_d" ];
+      # javascriptreact = [ "eslint_d" ];
       # html = [ "htmlhint" ];
-      css = [ "csslint" ];
+      # css = [ "csslint" ];
       # markdown = [
       # ];
       #clojure = ["clj-kondo"];

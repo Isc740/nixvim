@@ -84,7 +84,7 @@
 
     cursorline = true;
 
-    scrolloff = 6;
+    scrolloff = 4;
 
     hlsearch = true;
   };
